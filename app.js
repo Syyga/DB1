@@ -10,8 +10,9 @@ const PORT = process.env.PORT || 10000;
 const app = express();
 
 const allowedOrigins = [
-  "http://localhost:10000",
-  "https://db1-ityd.onrender.com",
+  "http://localhost:3000",
+  "https://db-1-45k6.onrender.com",
+  "https://syga-panda.netlify.app/",
 ];
 
 app.use(express.json());
