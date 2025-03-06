@@ -11,7 +11,7 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://db1-3kew.onrender.com",
+  "https://db1-79re.onrender.com",
   "https://syga-panda.netlify.app",
 ];
 
