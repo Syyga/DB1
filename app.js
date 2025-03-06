@@ -17,6 +17,7 @@ const allowedOrigins = [
 ];
 console.log("✅ DATABASE_URL:", process.env.DATABASE_URL);
 console.log("✅ PORT:", PORT);
+console.log("✅ Render Assigned PORT:", process.env.PORT);
 
 app.use(express.json());
 
