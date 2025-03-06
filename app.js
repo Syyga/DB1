@@ -6,7 +6,7 @@ import Product from "./models/Product.js";
 import Article from "./models/Article.js";
 
 dotenv.config();
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 const allowedOrigins = [
