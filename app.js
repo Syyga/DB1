@@ -8,27 +8,17 @@ import Article from "./models/Article.js";
 dotenv.config();
 const PORT = process.env.PORT || 3000;
 const app = express();
+app.use(cors({ origin: "*" }));
 
 const allowedOrigins = [
   "http://localhost:3000",
   "https://db1-79re.onrender.com",
   "https://syga-panda.netlify.app",
 ];
+console.log("✅ DATABASE_URL:", process.env.DATABASE_URL);
+console.log("✅ PORT:", PORT);
 
 app.use(express.json());
-app.use(
-  cors({
-    origin: (origin, callback) => {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
-    methods: ["GET", "POST", "PATCH", "DELETE"],
-    credentials: true,
-  })
-);
 
 mongoose
   .connect(process.env.DATABASE_URL)
